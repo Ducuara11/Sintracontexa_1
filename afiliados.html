@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Afiliados</title>
+    <link rel="stylesheet" href="afiliados.css" />
+    <link rel="stylesheet" href="firmas.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Sintracontexa</h1>
+        <div class="user-info">
+          <span>juan fernando ducuara</span>
+          <a href="index2.html" class="logout">Cerrar Sesión</a>
+        </div>
+      </header>
+      <main>
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar" id="search" />
+          <button type="button">&#128269;</button>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Cedula</th>
+              <th>Nombre</th>
+              <th>Activo</th>
+              <th>Retirado</th>
+              <th>Creado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>1073239832</td>
+              <td class="name">ZEA PIEDRAHITA YULIANA</td>
+              <td>1</td>
+              <td>0</td>
+              <td>2024-06-21 02:31:40</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>1076817628</td>
+              <td class="name">MORENO MOSQUERA MARTHA LUCIA</td>
+              <td>1</td>
+              <td>0</td>
+              <td>2024-06-21 02:31:40</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>1020463042</td>
+              <td class="name">MUÑOZ SERNA YULIANA</td>
+              <td>1</td>
+              <td>0</td>
+              <td>2024-06-21 02:31:40</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>43921698</td>
+              <td class="name">RAMIREZ VELASQUEZ ERICA YULIET</td>
+              <td>1</td>
+              <td>0</td>
+              <td>2024-06-21 02:31:40</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>1039596982</td>
+              <td class="name">CORTES ISAZA MANUELA</td>
+              <td>1</td>
+              <td>0</td>
+              <td>2024-06-21 02:31:40</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>1017248229</td>
+              <td class="name">MOSCOSO MONTOYA MAYLIN</td>
+              <td>1</td>
+              <td>0</td>
+              <td>2024-06-21 02:31:40</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>1001451676</td>
+              <td class="name">URIBE PULGARIN LUISA FERNANDA</td>
+              <td>1</td>
+              <td>0</td>
+              <td>2024-06-21 02:31:40</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>43637726</td>
+              <td class="name">RESTREPO PULGARIN SULMA PATRIC</td>
+              <td>1</td>
+              <td>0</td>
+              <td>2024-06-21 02:31:41</td>
+            </tr>
+          </tbody>
+        </table>
+      </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Entrega de Dotación Ropa Labor 2024</h3>
+        <p>
+          El sindicato de trabajadores de la confección y de la industria textil
+          de Colombia, en cumplimiento de su deber legal dotar con prendas de
+          vestir y calzado adecuados para ejecutar su labor, se hace entrega de:
+        </p>
+        <button id="openPopupBtn" class="btn btn-primary">Crear Firma 2</button>
+        <div id="popup" class="popup">
+          <div class="popup-content">
+            <span class="close-btn" id="closePopupBtn">&times;</span>
+            <canvas id="draw-canvas" width="400" height="100"></canvas>
+            <div class="row">
+              <input
+                type="button"
+                class="button"
+                id="draw-submitBtn"
+                value="Crear Imagen"
+              />
+              <input
+                type="button"
+                class="button"
+                id="draw-clearBtn"
+                value="Borrar Canvas"
+              />
+              <label>Color</label>
+              <input type="color" id="color" />
+              <label>Tamaño Puntero</label>
+              <input
+                type="range"
+                id="puntero"
+                min="1"
+                default="1"
+                max="5"
+                width="10%"
+              />
+            </div>
+            <br />
+            <div class="row">
+              <textarea id="draw-dataUrl" class="form-control" rows="5">
+Para los que saben que es esto:</textarea
+              >
+            </div>
+          </div>
+        </div>
+        <table id="modal-table">
+          <thead>
+            <tr>
+              <th>Año</th>
+              <th>Tipo</th>
+              <th>Talla</th>
+              <th>Cant</th>
+              <th>Firma Recibe</th>
+            </tr>
+          </thead>
+          <tbody id="modal-body"></tbody>
+        </table>
+        <div class="modal-footer">
+          <button class="modal-btn" id="close-modal">Close</button>
+          <button class="modal-btn" id="print-file">Imprimir Archivo</button>
+          <button class="modal-btn" id="edit-data">Editar</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="afiliados.js"></script>
+    <script src="firmas.js"></script>
+  </body>
+</html>

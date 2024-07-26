@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+
+    <script>
+        var firebaseConfig = {
+  apiKey: "AIzaSyBJmyKHYevnbuAvWkVvRwqgPg0tQjqg0jc",
+  authDomain: "dotacion-f6c2e.firebaseapp.com",
+  databaseURL: "https://dotacion-f6c2e-default-rtdb.firebaseio.com",
+  projectId: "dotacion-f6c2e",
+  storageBucket: "dotacion-f6c2e.appspot.com",
+  messagingSenderId: "73088856785",
+  appId: "1:73088856785:web:a22e9000646e567066cbf0",
+  measurementId: "G-30GNLRZGP5",
+};
+firebase.initializeApp(firebaseConfig);
+    </script>
+    <!-- Firebase -->
+  <body>
+    <div class="login-container">
+      <h2>Registro</h2>
+      <form id="login-form">
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <button type="submit">Registrar cuenta
+
+        </button>
+      </form>
+      <p id="error-message"></p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

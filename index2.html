@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyBJmyKHYevnbuAvWkVvRwqgPg0tQjqg0jc",
+        authDomain: "dotacion-f6c2e.firebaseapp.com",
+        databaseURL: "https://dotacion-f6c2e-default-rtdb.firebaseio.com",
+        projectId: "dotacion-f6c2e",
+        storageBucket: "dotacion-f6c2e.appspot.com",
+        messagingSenderId: "73088856785",
+        appId: "1:73088856785:web:a22e9000646e567066cbf0",
+        measurementId: "G-30GNLRZGP5",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <title>Iniciar Sesion</title>
+  </head>
+  <body>
+    <div class="body-container">
+      <div class="container" id="container">
+        <div>
+          <div class="form-container sign-up-container" id="sign-up-container">
+            <form>
+              <img src="logosintra.png" alt="Logo" class="logo" />
+              <h1>Crear Cuenta</h1>
+              <input type="email" id="email" placeholder="Email" required />
+              <input
+                type="password"
+                id="password"
+                placeholder="Contraseña"
+                required
+              />
+              <button class="btn-grad">Registrarse</button>
+            </form>
+          </div>
+          <div class="form-container sign-in-container" id="sign-in-container">
+            <form id="login-form">
+              <h1>Iniciar Sesion</h1>
+              <input type="email" id="email2" placeholder="Email" required />
+              <input
+                type="password"
+                id="password2"
+                placeholder="Contraseña"
+                required
+              />
+              <a href="#">Olvidaste tu Contraseña</a>
+              <button type="submit" class="btn-grad">Entrar2</button>
+            </form>
+          </div>
+        </div>
+
+        <div>
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h1>Bienvenido de nuevo a</h1>
+                <p>Sintracontexa</p>
+                <div class="btn-grad" id="signIn">Iniciar Sesion</div>
+              </div>
+              <div class="overlay-panel overlay-right">
+                <h1>Registrate en</h1>
+                <p>Sintracontexa</p>
+                <div class="btn-grad" id="signUp">Registrate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="app2.js"></script>
+  </body>
+</html>
